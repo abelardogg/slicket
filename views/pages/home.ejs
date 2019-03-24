@@ -17,7 +17,7 @@
         <hr>
         <div class="row">
             <div id="main-titles" class="col-12 row">
-                <div class="col-5 form-group">
+                <div class="col-5 offset-2 form-group">
                     <span>product</span>
                 </div>
                 <div class="col-3 form-group">
@@ -29,22 +29,31 @@
             </div>
 
             <div id="shop-list" class="col-12 row">
-                <div class="col-5 form-group">
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="product (optional)">
-                </div>
-                
-                <div class="col-3 form-group">
-                    <input type="number" class="form-control" id="exampleInputEmail1a" aria-describedby="emailHelp" placeholder="price*" value="0.0">
-                </div>
-                
-                <div class="col-2 form-group">
-                    <div class="input-group mb-2">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">X</div>
+                <div class="col-12 row shop-list-form">
+                    <div class="col-2 remove-item">
+                        <button type="button" class="btn btn-outline-danger">Remove</button>
+                    </div>
+                    <div class="col-5 form-group">
+                        <input type="text" class="form-control" placeholder="product (optional)">
+                    </div>
+                    
+                    <div class="col-3 form-group">
+                        <input type="number" class="form-control" placeholder="price*" value="0.0">
+                    </div>
+                    
+                    <div class="col-2 form-group">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">X</div>
+                            </div>
+                            <input type="number" class="form-control" placeholder="quantity*" value="1">
                         </div>
-                        <input type="number" class="form-control" id="exampleInputEmail1a" aria-describedby="emailHelp" placeholder="quantity*" value="1">
                     </div>
                 </div>
+            </div>
+
+            <div class="col-12">
+                <button id="add-item" type="button" class="btn btn-primary btn-lg btn-block">add item to list</button>
             </div>
 
             <div class="col-12"><hr></div>
