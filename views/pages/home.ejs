@@ -16,37 +16,39 @@
         </div>
         <hr>
         <div class="row">
-            <div id="main-titles" class="col-12 row">
-                <div class="col-5 offset-2 form-group">
-                    <span>product</span>
-                </div>
-                <div class="col-3 form-group">
-                    <span>price*</span>
-                </div>
-                <div class="col-2 form-group">
-                    <span>quantity*</span>
+            <div id="main-titles" class="col-12 d-none d-md-block">
+                <div class="row">
+                    <div class="col-5 offset-2 form-group">
+                        <span>product</span>
+                    </div>
+                    <div class="col-3 form-group">
+                        <span>price*</span>
+                    </div>
+                    <div class="col-2 form-group">
+                        <span>quantity*</span>
+                    </div>
                 </div>
             </div>
 
-            <div id="shop-list" class="col-12 row">
-                <div class="col-12 row item-row">
-                    <div class="col-2 remove-item">
-                        <!-- <button type="button" class="btn btn-outline-danger">Remove</button> -->
+            <div id="shop-list" class="col-12">
+                <div class="row item-row">
+                    <div class="col-12 col-md-2 remove-item">
+                        <!-- <button type="button" class="btn btn-outline-danger btn-block">Remove</button> -->
                     </div>
-                    <div class="col-5 form-group">
+                    <div class="col-12 col-md-5 form-group">
                         <input type="text" class="form-control" placeholder="product (optional)">
                     </div>
                     
-                    <div class="col-3 form-group">
-                        <input type="number" class="form-control item-price" placeholder="price*" value="0.0">
+                    <div class="col-8 col-md-3 form-group">
+                        <input type="number" class="form-control item-price" placeholder="price*">
                     </div>
                     
-                    <div class="col-2 form-group">
+                    <div class="col-4 col-md-2 form-group">
                         <div class="input-group mb-2">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">X</div>
                             </div>
-                            <input type="number" class="form-control item-quantity" placeholder="quantity*" value="1">
+                            <input type="number" class="form-control item-quantity" placeholder="quantity*">
                         </div>
                     </div>
                 </div>
@@ -83,7 +85,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text">%</div>
                         </div>
-                        <input type="number" class="form-control" id="tip-input" placeholder="tip" value="0">
+                        <input type="number" class="form-control" id="tip-input" placeholder="tip">
                     </div>
                 </div>
             </div>
