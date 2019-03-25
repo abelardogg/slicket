@@ -6,26 +6,25 @@
 
     var standardListItemForm = 
     `
-    <div class="col-12 row item-row">
-    
-        <div class="col-2 remove-item">
-            <button type="button" class="btn btn-outline-danger">Remove</button>
+    <hr class="d-md-none">
+    <div class="row item-row">
+        <div class="col-12 col-md-2 remove-item">
+            <button type="button" class="btn btn-outline-danger btn-block">Remove</button>
         </div>
-
-        <div class="col-5 form-group">
+        <div class="col-12 col-md-5 form-group">
             <input type="text" class="form-control" placeholder="product (optional)">
         </div>
         
-        <div class="col-3 form-group">
-            <input type="number" class="form-control item-price" placeholder="price*" value="0.0">
+        <div class="col-8 col-md-3 form-group">
+            <input type="number" class="form-control item-price" placeholder="price*">
         </div>
         
-        <div class="col-2 form-group">
+        <div class="col-4 col-md-2 form-group">
             <div class="input-group mb-2">
                 <div class="input-group-prepend">
                     <div class="input-group-text">X</div>
                 </div>
-                <input type="number" class="form-control item-quantity" placeholder="quantity*" value="1">
+                <input type="number" class="form-control item-quantity" placeholder="quantity*">
             </div>
         </div>
     </div>
