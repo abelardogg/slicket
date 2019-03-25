@@ -69,26 +69,32 @@
                                 </label>
                             </div>
                             <div class="form-check col-6">
-                                <input class="form-check-input" type="radio" name="tipRadios" id="tip-radio-2" value="option2">
+                                <input disabled class="form-check-input" type="radio" name="tipRadios" id="tip-radio-2" value="option2">
                                 <label class="form-check-label" for="tip-radio-2">
                                     hard
                                 </label>
                             </div>
                         </div>
                 </fieldset>
+
                 <div class="form-group col-4">
                     <label for="tip-input">tip</label>
-                    <input type="number" class="form-control" id="tip-input" placeholder="tip" value="0">
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">%</div>
+                        </div>
+                        <input type="number" class="form-control" id="tip-input" placeholder="tip" value="0">
+                    </div>
                 </div>
             </div>
 
             <div class="col-12"><hr></div>
 
             <div id="summary" class="col-12">
-                <span class="h3">Total: </span> <span class="h1">0.0</span>
+                <span class="h3">Total: </span><span class="h4">$</span><span id="ticket-total" class="h1">0.0</span>
             </div>
             <div class="col-12">
-                <button id="calculate-total">Calculate total</button>
+                <button id="calculate-total" class="btn btn-outline-success btn-lg btn-block">Calculate total</button>
             </div>
         </div>
     </div>

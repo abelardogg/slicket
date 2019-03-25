@@ -38,7 +38,10 @@
 
         $('#calculate-total').on('click', function(){
             var $itemRows = $('.item-row');
-            console.log(slicket.calculateTotal($itemRows));
+            var tip = $('#tip-input').val();
+            var total = slicket.items.calculateTotal($itemRows, tip);
+            console.log('total: ' + total);
+            $('#ticket-total').text(total);
         });
         
         $(document).on('click', '#shop-list .remove-item', function(e){
@@ -48,20 +51,30 @@
     });
     
 
-    slicket = {
+    slicket.items = {
         calculateRowTotal: function(itemPrice, itemQuantity){
             return itemPrice*itemQuantity;
         },
-        calculateTotal: function($itemRows){
+        calculateItemsTotal: function($itemRows){
             var total = 0;
             var rowTotal = 0;
             var itemPrice = 0, itemQuantity = 0;
             for(var x = 0 ; x < $itemRows.length ; x++){
                 itemPrice = $($itemRows[x]).find('.item-price').val();
                 itemQuantity = $($itemRows[x]).find('.item-quantity').val();
-                rowTotal = slicket.calculateRowTotal(itemPrice, itemQuantity);
+                rowTotal = slicket.items.calculateRowTotal(itemPrice, itemQuantity);
                 total += rowTotal;
             }
+            return total;
+        },
+        calculateTip: function(itemsTotal, percentage){
+            var tip = itemsTotal * (percentage/100);
+            return tip;
+        },
+        calculateTotal: function($itemRows, tip){
+            var subTotal = slicket.items.calculateItemsTotal($itemRows);
+            var tip = slicket.items.calculateTip(subTotal, tip);
+            var total = subTotal+tip;
             return total;
         }
 
