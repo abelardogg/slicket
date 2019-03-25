@@ -1,6 +1,11 @@
-/* .item-row:nth-child(odd){
-    background-color: rgb(219, 219, 219);
-} */
+#main{min-height: 85vh;}
+#footer{min-height: 80px;
+    background: #007bff;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
 @media(max-width: 767px){
     .remove-item{margin-bottom: 10px;}
 }
